@@ -12,6 +12,15 @@ modules:
         TARGET_CONTAINER: ~{hdi-container-name}
     - name: FSDM_DEVELOPER-fk920j4wvbwr140y-FSDM_1_Datamodel-FSDM_1_Datamodel-container
 
+
+ - name: node
+   type: nodejs
+   path: node
+   provides:
+    - name: node_api
+      properties:
+         url: ${default-url}
+
 resources:
  - name: hdi_db
    properties:
